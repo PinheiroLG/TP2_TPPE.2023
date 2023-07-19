@@ -115,15 +115,15 @@ A simplicidade em um bom projeto de software significa criar soluções claras e
 ### 3. Relação com os maus cheiros definidos por Fowler:
 A característica da simplicidade em um código de software está diretamente relacionada à resolução de diversos "maus cheiros" identificados por Martin Fowler. Ao buscar a simplicidade no código, muitos desses problemas são naturalmente mitigados ou eliminados. Aqui estão algumas das relações entre a simplicidade e alguns "maus cheiros" específicos definidos por Fowler:
 
-* **Duplicação de código (Duplicated Code):**
-* **Métodos longos (Long Method):**
-* **Classes grandes (Large Class):**
-* **Muitos parâmetros (Long Parameter List):**
-* **Métodos complexos condicionais (Complex Conditional Expressions):**
-* **Dependências desnecessárias (Inappropriate Intimacy):**
-* **Código pouco claro (Shotgun Surgery):**
-* **Comentários desnecessários (Comments):**
-* **Classes com muitas responsabilidades (Large Class):**
+* **Duplicação de código (Duplicated Code)**
+* **Métodos longos (Long Method)**
+* **Classes grandes (Large Class)**
+* **Muitos parâmetros (Long Parameter List)**
+* **Métodos complexos condicionais (Complex Conditional Expressions)**
+* **Dependências desnecessárias (Inappropriate Intimacy)**
+* **Código pouco claro (Shotgun Surgery)**
+* **Comentários desnecessários (Comments)**
+* **Classes com muitas responsabilidades (Large Class)**
 
 ### 4. Exemplo de operação de refatoração capaz de levar o projeto de código a ter uma boa simplicidade:
 Um exemplo de operação de refatoração que pode levar o projeto de código a ter uma boa simplicidade é a extração de método (Extract Method) na qual é uma técnica de refatoração que consiste em identificar trechos de código dentro de um método que realizam uma tarefa específica e isolá-los em um novo método. Essa operação tem como objetivo melhorar a legibilidade, reutilização e manutenção do código.
