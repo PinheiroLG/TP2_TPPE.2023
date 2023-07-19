@@ -17,8 +17,9 @@ Este trabalho é o Trabalho 2 da disciplina de Técnicas de programação para P
 * Extensibilidade;
 * Ausência de duplicidade no código;
 * Simplicidade
-* ?
+* Modularidade (baixo acoplamento e alta coesão)
 
+***
 ## Boa documentação
 
 ### 1. Descrição
@@ -37,7 +38,8 @@ Uma documentação de qualidade desempenha um papel fundamental na identificaç�
 ### 4. Exemplo de operação de refatoração capaz de levar o projeto de código e ter uma boa documentação:
 A técnica conhecida como "Extração de Método" envolve a criação de um novo método a partir de um trecho de código existente, onde a lógica relacionada é agrupada em uma única função com um nome significativo. Essa prática não apenas aprimora a clareza e legibilidade do código, mas também tem um impacto positivo na qualidade da documentação do projeto. A extração de método facilita a compreensão do propósito e funcionamento da função para outros desenvolvedores, promovendo uma colaboração mais efetiva no projeto e auxiliando na manutenção futura. Além disso, ao utilizar nomes adequados para métodos e argumentos, a documentação se torna mais legível, simplificando a compreensão do código e evitando a necessidade de comentários excessivos. Essa abordagem contribui para a melhoria geral da documentação, tornando-a mais eficiente e eficaz na comunicação das funcionalidades do software.
 
-## 2. Extensibilidade
+***
+## Extensibilidade
 
 ### 1. Descrição:
 
@@ -64,6 +66,7 @@ Ao extrair um método, estamos dividindo o código em unidades lógicas menores 
 
 Além disso, a extração de métodos melhora a modularidade do código, permitindo que cada método tenha uma única responsabilidade clara. Isso ajuda a reduzir o acoplamento entre as diferentes partes do sistema, tornando-o mais flexível para adicionar novas funcionalidades. Os métodos extraídos também podem servir como pontos de extensão, onde novos comportamentos podem ser adicionados de forma coesa e sem afetar o código existente.
 
+***
 ## Ausência de duplicidades
 
 ### 1. Descrição
@@ -97,6 +100,7 @@ Outro benefício é que a extração de métodos ajuda a reduzir a complexidade 
 
 No entanto, é importante ter cuidado ao extrair métodos. É necessário considerar a coesão, garantindo que cada método tenha uma única responsabilidade bem definida. Também é fundamental garantir que os parâmetros e retornos dos métodos extraídos sejam adequados e bem documentados.
 
+***
 ## Simplicidade
 
 ### 1. Descrição
@@ -129,3 +133,33 @@ A característica da simplicidade em um código de software está diretamente re
 Um exemplo de operação de refatoração que pode levar o projeto de código a ter uma boa simplicidade é a extração de método (Extract Method) na qual é uma técnica de refatoração que consiste em identificar trechos de código dentro de um método que realizam uma tarefa específica e isolá-los em um novo método. Essa operação tem como objetivo melhorar a legibilidade, reutilização e manutenção do código.
 Quando um método se torna muito longo, possui trechos repetidos ou executa várias tarefas distintas, pode ser difícil compreender sua funcionalidade como um todo. Além disso, a repetição de código em vários lugares aumenta a probabilidade de erros e dificulta a atualização do software, caso a lógica precise ser modificada.
 Ao aplicar a extração de método, o trecho de código relevante é isolado em um novo método separado, com um nome descritivo que indique sua finalidade. Os parâmetros necessários para a execução do trecho de código são passados para o novo método, e ele pode retornar um valor, se for o caso. Assim, o método original passa a chamar o novo método, delegando a responsabilidade pela tarefa específica.
+
+***
+## Modularidade (Baixo Acoplamento e Alta Coesão)
+
+### 1. **Descrição:**
+A modularidade é uma característica essencial em projetos de software que se refere à divisão do código em módulos independentes e bem definidos. Esses módulos devem ser altamente coesos, ou seja, cada módulo deve ter uma única responsabilidade bem definida, com suas funcionalidades relacionadas e organizadas de forma lógica e coesa. Além disso, os módulos devem ser fracos ou pouco acoplados, o que significa que as dependências entre os módulos devem ser minimizadas, reduzindo a interdependência entre eles.
+
+### 2. **Efeitos no Código:**
+- **Estrutura:** A modularidade contribui para uma estrutura clara e organizada do código, facilitando a leitura, manutenção e entendimento.
+- **Claridade:** Módulos coesos e com baixo acoplamento tornam o código mais legível e compreensível, pois cada parte é mais específica e focada em sua funcionalidade.
+- **Coesão:** A alta coesão permite que o código seja mais coeso, ou seja, cada módulo contém um conjunto relacionado de funcionalidades, o que ajuda a evitar fragmentação e dispersão de lógica.
+- **Acoplamento:** Com baixo acoplamento, as mudanças em um módulo têm menos impacto em outros módulos, tornando o código mais flexível e menos propenso a efeitos colaterais não intencionais.
+- **Reusabilidade:** Módulos bem definidos e independentes são mais fáceis de serem reutilizados em diferentes partes do código ou até mesmo em outros projetos.
+
+### 3. **Relação com Maus-Cheiros de Código:**
+- **Feature Envy (Inveja de Funcionalidade):** Esse mau cheiro ocorre quando um módulo ou classe usa excessivamente os métodos de outra classe, demonstrando acoplamento excessivo. Isso pode ser um indicativo de que a funcionalidade deveria estar em um módulo diferente, mais coeso e com baixo acoplamento.
+- **Divergent Change (Mudança Divergente):** Acontece quando uma classe ou módulo é frequentemente modificado por motivos distintos. Isso pode indicar falta de coesão e que o módulo deveria ser dividido em partes mais especializadas e independentes.
+- **Shotgun Surgery (Cirurgia de Escopeta):** Ocorre quando uma única mudança no código requer várias alterações em diferentes partes do sistema. Isso pode ser um indício de alto acoplamento entre os módulos e que as responsabilidades não estão bem distribuídas.
+
+### 4. **Operação de Refatoração:**
+**Extrair Classe (Extract Class):** Essa operação permite extrair parte da funcionalidade de uma classe existente em uma nova classe separada. Essa refatoração é útil quando uma classe tem responsabilidades que não pertencem totalmente a ela e devem ser colocadas em uma nova unidade coesa e com baixo acoplamento.
+
+Para aplicar essa operação de refatoração, siga os seguintes passos:
+
+1. Identifique parte da funcionalidade da classe que pode ser agrupada em uma nova classe com responsabilidades mais específicas.
+2. Crie uma nova classe e mova os métodos e atributos relacionados a essa funcionalidade para a nova classe.
+3. Caso necessário, ajuste as dependências entre as classes para garantir o baixo acoplamento.
+4. Verifique se o comportamento externamente observável da classe original não foi alterado e que o sistema continua funcionando corretamente após a extração.
+
+Ao extrair classes coesas e com baixo acoplamento, você estará promovendo a modularidade do código, melhorando sua manutenibilidade, legibilidade e reusabilidade.
