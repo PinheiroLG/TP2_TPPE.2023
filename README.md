@@ -37,7 +37,7 @@ Uma documentação de qualidade desempenha um papel fundamental na identificaç�
 ### 4. Exemplo de operação de refatoração capaz de levar o projeto de código e ter uma boa documentação:
 A técnica conhecida como "Extração de Método" envolve a criação de um novo método a partir de um trecho de código existente, onde a lógica relacionada é agrupada em uma única função com um nome significativo. Essa prática não apenas aprimora a clareza e legibilidade do código, mas também tem um impacto positivo na qualidade da documentação do projeto. A extração de método facilita a compreensão do propósito e funcionamento da função para outros desenvolvedores, promovendo uma colaboração mais efetiva no projeto e auxiliando na manutenção futura. Além disso, ao utilizar nomes adequados para métodos e argumentos, a documentação se torna mais legível, simplificando a compreensão do código e evitando a necessidade de comentários excessivos. Essa abordagem contribui para a melhoria geral da documentação, tornando-a mais eficiente e eficaz na comunicação das funcionalidades do software.
 
-### 2. Extensibilidade
+## 2. Extensibilidade
 
 ### 1. Descrição:
 
