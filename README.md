@@ -64,6 +64,35 @@ Ao extrair um método, estamos dividindo o código em unidades lógicas menores 
 
 Além disso, a extração de métodos melhora a modularidade do código, permitindo que cada método tenha uma única responsabilidade clara. Isso ajuda a reduzir o acoplamento entre as diferentes partes do sistema, tornando-o mais flexível para adicionar novas funcionalidades. Os métodos extraídos também podem servir como pontos de extensão, onde novos comportamentos podem ser adicionados de forma coesa e sem afetar o código existente.
 
+## Ausência de duplicidades
+
+### 1. Descrição
+A ausência de duplicidades é uma característica desejável em código de qualidade, e ela se refere ao princípio de evitar repetições desnecessárias de trechos de código. Quando uma duplicidade é identificada no código, significa que um mesmo trecho de lógica, expressão ou funcionalidade está repetido em mais de um lugar. Isso pode ocorrer em funções, classes ou até mesmo em trechos menores de código.
+
+### 2. Efeitos no código:
+* **Estrutura:** A ausência de duplicidades melhora a estrutura do código, pois evita a fragmentação de lógica em vários lugares e promove uma organização mais coesa e concisa.
+* **Claridade:** O código fica mais claro e fácil de entender quando duplicações são eliminadas, uma vez que os desenvolvedores não precisam procurar e entender múltiplas ocorrências de uma mesma lógica.
+* **Eficiência:** A reutilização de código reduz o tamanho do programa, levando a um código mais enxuto e fácil de manter.
+* **Manutenção:** Quando uma mudança é necessária, a ausência de duplicidades implica em fazer a alteração em um único lugar, aumentando a produtividade e diminuindo a probabilidade de erros.
+* **Coesão:** A ausência de duplicidades fortalece a coesão do código, pois concentra a lógica em um único local, tornando o comportamento de uma função ou classe mais consistente.
+* **Acoplamento:** A redução de duplicações também pode levar a um menor acoplamento entre diferentes partes do código, uma vez que a funcionalidade compartilhada é movida para um local central.
+
+### 3. Relação com os maus cheiros definidos por Fowler:
+Entre os maus cheiros de código definidos por Martin Fowler, a ausência de duplicidades está diretamente relacionada ao "Duplicated Code" (Código Duplicado). Esse mau cheiro ocorre quando há repetição de trechos de código em locais diferentes do projeto. O "Código Duplicado" é considerado um problema porque dificulta a manutenção, torna o código mais propenso a erros e pode levar a inconsistências.
+
+### 4. Exemplo de operação de refatoração capaz de levar o projeto de código e ter uma boa documentação:
+A operação de refatoração que pode ser aplicada para eliminar duplicidades e alcançar a característica desejada é a extração de método ou função. Essa técnica consiste em identificar trechos de código duplicados e movê-los para uma nova função ou método que possa ser chamado em todas as ocorrências onde a duplicação existia.
+
+Passos para a refatoração:
+
+* **Identificação:** Localize trechos de código repetidos em diferentes partes do projeto.
+* **Criação da função ou método:** Crie uma nova função ou método que contenha o trecho de código duplicado. Essa função deve ser genérica o suficiente para ser reutilizada em todos os locais onde a duplicação foi encontrada.
+* **Substituição:** Substitua todas as ocorrências duplicadas pelo chamado da nova função ou método criado no passo anterior.
+* **Testes:** Certifique-se de que todas as funcionalidades afetadas pelos ajustes estão funcionando corretamente e que os testes continuam passando.
+* **Validação:** Verifique se a eliminação das duplicidades não causou nenhum efeito colateral indesejado no restante do código.
+
+Após a conclusão desses passos, o código deve estar livre de duplicidades, melhorando sua estrutura, claridade, coesão e possivelmente reduzindo acoplamento, tornando-o mais limpo e mais fácil de manter.
+
 Outro benefício é que a extração de métodos ajuda a reduzir a complexidade do código. Ao dividir o código em partes menores e bem definidas, fica mais fácil entender e dar manutenção, tornando as futuras extensões mais simples e menos propensas a introduzir bugs.
 
 No entanto, é importante ter cuidado ao extrair métodos. É necessário considerar a coesão, garantindo que cada método tenha uma única responsabilidade bem definida. Também é fundamental garantir que os parâmetros e retornos dos métodos extraídos sejam adequados e bem documentados.
