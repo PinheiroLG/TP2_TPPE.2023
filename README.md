@@ -16,7 +16,7 @@ Este trabalho é o Trabalho 2 da disciplina de Técnicas de programação para P
 * Boa documentação;
 * Extensibilidade;
 * Ausência de duplicidade no código;
-* ?
+* Simplicidade
 * ?
 
 ## Boa documentação
@@ -96,3 +96,36 @@ Após a conclusão desses passos, o código deve estar livre de duplicidades, me
 Outro benefício é que a extração de métodos ajuda a reduzir a complexidade do código. Ao dividir o código em partes menores e bem definidas, fica mais fácil entender e dar manutenção, tornando as futuras extensões mais simples e menos propensas a introduzir bugs.
 
 No entanto, é importante ter cuidado ao extrair métodos. É necessário considerar a coesão, garantindo que cada método tenha uma única responsabilidade bem definida. Também é fundamental garantir que os parâmetros e retornos dos métodos extraídos sejam adequados e bem documentados.
+
+## Simplicidade
+
+### 1. Descrição
+A simplicidade em um bom projeto de software significa criar soluções claras e fáceis de entender, evitando complexidades desnecessárias. Isso resulta em código estruturado e organizado, facilitando a leitura e compreensão por desenvolvedores, além de reduzir a duplicação de código. A busca pela simplicidade também melhora a coesão entre os componentes do software, define responsabilidades precisas e separadas, e diminui o acoplamento entre os módulos, tornando o código mais flexível. Além disso, um código simples é mais fácil de testar e depurar, acelerando a manutenção e identificação de erros. A simplicidade também beneficia a integração de novos membros da equipe, aumenta a colaboração e pode resultar em melhor desempenho do software. No entanto, é importante equilibrar a simplicidade com a funcionalidade necessária para garantir a qualidade do produto final.
+
+### 2. Efeitos no Código
+* **Estrutura clara e organizada:** A simplicidade geralmente resulta em uma estrutura de código mais clara e bem organizada. A lógica do programa é mais fácil de entender e seguir, facilitando a navegação pelo código-fonte.
+* **Facilidade de leitura e compreensão:** Um código simples é mais legível, o que significa que outros desenvolvedores podem compreendê-lo com mais facilidade. Isso é especialmente importante em projetos de equipe, onde diferentes pessoas podem trabalhar em partes diferentes do código.
+* **Redução da duplicação de código:** A busca pela simplicidade pode levar a identificar oportunidades de reutilização de código, reduzindo assim a duplicação. Isso torna o código mais conciso, mais fácil de manter e menos propenso a erros.
+* **Coesão melhorada:** A simplicidade muitas vezes leva a um maior grau de coesão entre os componentes do software. As responsabilidades de cada módulo ficam mais bem definidas e separadas, facilitando a manutenção e modificação.
+* **Baixo acoplamento:** A simplicidade geralmente leva a um menor acoplamento entre os módulos do software. Com menos dependências complexas, é mais fácil alterar um componente específico sem afetar todo o sistema, tornando o código mais flexível e adaptável.
+* **Facilidade de testes:** Um código simples é mais fácil de testar, pois as funcionalidades estão bem definidas e isoladas. Isso torna os testes de unidade e integração mais simples e eficazes.
+* **Facilidade de depuração:** Em um código simples, é mais fácil identificar a origem dos bugs e problemas, pois a lógica é mais clara e a quantidade de elementos que podem causar erros é reduzida.
+* **Facilidade de manutenção e evolução:** A simplicidade torna a manutenção e evolução do software mais eficientes. Novas funcionalidades podem ser implementadas de forma mais rápida e menos propensa a criar problemas inesperados.
+
+### 3. Relação com os maus cheiros definidos por Fowler:
+A característica da simplicidade em um código de software está diretamente relacionada à resolução de diversos "maus cheiros" identificados por Martin Fowler. Ao buscar a simplicidade no código, muitos desses problemas são naturalmente mitigados ou eliminados. Aqui estão algumas das relações entre a simplicidade e alguns "maus cheiros" específicos definidos por Fowler:
+
+* **Duplicação de código (Duplicated Code):**
+* **Métodos longos (Long Method):**
+* **Classes grandes (Large Class):**
+* **Muitos parâmetros (Long Parameter List):**
+* **Métodos complexos condicionais (Complex Conditional Expressions):**
+* **Dependências desnecessárias (Inappropriate Intimacy):**
+* **Código pouco claro (Shotgun Surgery):**
+* **Comentários desnecessários (Comments):**
+* **Classes com muitas responsabilidades (Large Class):**
+
+### 4. Exemplo de operação de refatoração capaz de levar o projeto de código a ter uma boa simplicidade:
+Um exemplo de operação de refatoração que pode levar o projeto de código a ter uma boa simplicidade é a extração de método (Extract Method) na qual é uma técnica de refatoração que consiste em identificar trechos de código dentro de um método que realizam uma tarefa específica e isolá-los em um novo método. Essa operação tem como objetivo melhorar a legibilidade, reutilização e manutenção do código.
+Quando um método se torna muito longo, possui trechos repetidos ou executa várias tarefas distintas, pode ser difícil compreender sua funcionalidade como um todo. Além disso, a repetição de código em vários lugares aumenta a probabilidade de erros e dificulta a atualização do software, caso a lógica precise ser modificada.
+Ao aplicar a extração de método, o trecho de código relevante é isolado em um novo método separado, com um nome descritivo que indique sua finalidade. Os parâmetros necessários para a execução do trecho de código são passados para o novo método, e ele pode retornar um valor, se for o caso. Assim, o método original passa a chamar o novo método, delegando a responsabilidade pela tarefa específica.
